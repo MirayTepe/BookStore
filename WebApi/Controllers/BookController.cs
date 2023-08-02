@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApi.BookOperations.CreateBook;
+using WebApi.BookOperations.DeleteBook;
 using WebApi.BookOperations.GetBooks;
 using WebApi.BookOperations.GetById;
 using WebApi.BookOperations.UpdateBook;
@@ -29,13 +30,21 @@ namespace WebApi.AddControllers{
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            GetByIdBookCommand command = new GetByIdBookCommand(_context);
-            var book = command.Handle(id);
+            BookDetailViewModel result;
+            try
+            {
+               GetByIdBookCommand command = new GetByIdBookCommand(_context);
+               command.BookId=id;
+               result = command.Handle();
 
-            if (book is null)
-                return NotFound();
-
-            return Ok(book);
+            }
+            catch (Exception ex)
+            {
+                
+                return BadRequest(ex.Message);
+            }
+           return Ok(result);
+            
         }
         
        
@@ -59,10 +68,10 @@ namespace WebApi.AddControllers{
         //Put
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id,[FromBody]UpdateBookModel updatedBook){
-            UpdateBookCommand command=new UpdateBookCommand(_context);
-
+            
             try
             {
+                UpdateBookCommand command=new UpdateBookCommand(_context);
                 command.BookId=id;
                 command.Model=updatedBook;
                 command.Handle();
@@ -77,14 +86,18 @@ namespace WebApi.AddControllers{
 
     [HttpDelete("{id}")]
     public IActionResult DeleteBook(int id){
-      var book=_context.Books.SingleOrDefault(x=>x.Id==id);
-      if (book is null)
-             return BadRequest();
-    
-       _context.Books.Remove(book);
-       _context.SaveChanges();
-       return Ok();
-
+      try
+      {
+         DeleteBookCommand command=new DeleteBookCommand(_context);
+         command.BookId=id;
+         command.Handle();  
+      }
+       catch (Exception ex)
+      {
+        return BadRequest(ex.Message);
+      }
+     
+      return Ok();
 
     }
   }

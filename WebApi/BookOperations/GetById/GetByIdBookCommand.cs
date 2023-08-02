@@ -1,4 +1,5 @@
 using System.Linq;
+using WebApi.Common;
 using WebApi.DBOperations;
 
 
@@ -7,37 +8,37 @@ namespace WebApi.BookOperations.GetById
     public class GetByIdBookCommand
     {
         private readonly BookStoreDbContext _context;
+        public int BookId {get; set;}
 
         public GetByIdBookCommand(BookStoreDbContext context)
         {
             _context = context;
         }
 
-        public BookViewModel Handle(int id)
+        public BookDetailViewModel Handle()
         {
-            var book = _context.Books.SingleOrDefault(b => b.Id == id);
+            var book = _context.Books.SingleOrDefault(b => b.Id == BookId);
 
             if (book is null)
-                return null;
+                throw new InvalidOperationException("Kitap bulunamadı.");
 
-            var bookViewModel = new BookViewModel
-            {
-                Id = book.Id,
-                Title = book.Title,
-                GenreId = book.GenreId,
-                PageCount = book.PageCount,
-                PublishDate = book.PublishDate
-            };
+            BookDetailViewModel vm = new BookDetailViewModel();
+          
+             
+                vm.Title = book.Title;
+                vm.PageCount = book.PageCount;
+                vm.PublishDate = book.PublishDate.Date.ToString("dd/MM/yyyy");
+                vm.Genre=((GenreEnum)book.GenreId).ToString();
+            
 
-            return bookViewModel;
+            return vm;
         }
     }
-     public class BookViewModel
+     public class BookDetailViewModel
     {
-        public int Id { get; set; }
         public string Title { get; set; }
-        public int GenreId { get; set; }
+        public string Genre { get; set; }
         public int PageCount { get; set; }
-        public DateTime PublishDate { get; set; }
+        public string PublishDate { get; set; }
     }
 }
