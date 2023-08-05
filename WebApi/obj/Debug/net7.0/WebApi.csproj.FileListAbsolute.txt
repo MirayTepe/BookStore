@@ -34,3 +34,6 @@ D:\source\repos\BookStore\WebApi\obj\Debug\net7.0\ref\WebApi.dll
 D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\AutoMapper.dll
+D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\FluentValidation.dll
