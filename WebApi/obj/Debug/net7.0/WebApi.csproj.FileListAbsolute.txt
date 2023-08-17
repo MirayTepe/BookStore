@@ -37,3 +37,4 @@ D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.
 D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\AutoMapper.dll
 D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\FluentValidation.dll
+D:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Newtonsoft.Json.dll
