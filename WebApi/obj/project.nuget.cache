@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "67IzLnwEpnUPFQ8APLo+vAdrj4LD+r6ipojR8b2weGtkxABOUKUchpIQjw2NIF+ghA/akTv4IYL22pa7NaIBPg==",
+  "dgSpecHash": "Xjq2MiwtC352Ox7+3Saw//RZJpHaZFvAPJ+pXn1qQBqYrnP70u9MCQIpeoVjTMIyFUt2uflC1/TrhQOTpPZ5Pg==",
   "success": true,
-  "projectFilePath": "D:\\source\\repos\\BookStore\\WebApi\\WebApi.csproj",
+  "projectFilePath": "d:\\source\\repos\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tepem\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\tepem\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

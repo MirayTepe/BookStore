@@ -14,7 +14,7 @@ internal class Program
         //.NET5'te startup.cs dosyası yerine buraya ekledik.
         builder.Services.AddControllers();
         builder.Services.AddDbContext<BookStoreDbContext>(opt=>opt.UseInMemoryDatabase(databaseName: "BookStoreDB"));
-       
+        builder.Services.AddScoped<IBookStoreDbContext>(grovider=>grovider.GetService<BookStoreDbContext>());
         builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
         builder.Services.AddSingleton<ILoggerServices,ConsoleLogger>();
        // builder.Services.AddSingleton<ILoggerServices,DBLogger>();

@@ -6,10 +6,10 @@ namespace WebApi.Application.AuthorOperation.Queries.GetAuthorDetail
 	public class GetAuthorDetailQuery
 	{
 		public int AuthorId { get; set; }
-		private readonly BookStoreDbContext _dbContext;
+		private readonly IBookStoreDbContext _dbContext;
 		private readonly IMapper _mapper;
 
-		public GetAuthorDetailQuery(BookStoreDbContext dbContext, IMapper mapper)
+		public GetAuthorDetailQuery(IBookStoreDbContext dbContext, IMapper mapper)
 		{
 			_dbContext = dbContext;
 			_mapper = mapper;
@@ -20,7 +20,7 @@ namespace WebApi.Application.AuthorOperation.Queries.GetAuthorDetail
 			var author = _dbContext.Authors.Where(a => a.Id == AuthorId).SingleOrDefault();
 			
 			if (author is null)
-				throw new InvalidOperationException("Yazar bulunamıyor!");
+				throw new InvalidOperationException("Yazar kaydı bulunamadı.");
 			
 			
 			

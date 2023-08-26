@@ -8,12 +8,12 @@ using WebApi.DBOperations;
 namespace WebApi.Application.BookOperations.Queries.GetById
 {
     public class GetBookDetailQuery { 
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         public int BookId {get; set;}
 
         private readonly IMapper _mapper;
 
-        public GetBookDetailQuery(BookStoreDbContext context,IMapper mapper)
+        public GetBookDetailQuery(IBookStoreDbContext context,IMapper mapper)
         {
             _context = context;
             _mapper  = mapper;
@@ -39,7 +39,7 @@ namespace WebApi.Application.BookOperations.Queries.GetById
         }
     }
      public class BookDetailViewModel
-    {
+     {
         public string Title { get; set; }
         public string Genre { get; set; }
         public string FirstName { get; set; }

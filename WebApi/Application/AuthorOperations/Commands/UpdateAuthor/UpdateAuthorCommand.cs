@@ -7,10 +7,10 @@ namespace WebApi.Application.AuthorOperation.Commands.UpdateAuthor
         public int AuthorId { get; set; }
         public UpdateAuthorViewModel Model { get; set; }
         
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public UpdateAuthorCommand(BookStoreDbContext dbContext, IMapper mapper)
+        public UpdateAuthorCommand(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
@@ -21,7 +21,7 @@ namespace WebApi.Application.AuthorOperation.Commands.UpdateAuthor
             var author = _dbContext.Authors.SingleOrDefault(a => a.Id == AuthorId);
             
             if (author is null)
-                throw new InvalidOperationException("ID doğru değil.");
+                throw new InvalidOperationException("Yazar bulunamadı.");
             
             _mapper.Map(Model, author);
             
