@@ -15,7 +15,7 @@ using WebApi.Application.AuthorOperation.Queries.GetAuthors;
 
 namespace WebApi.Controllers
 {
-   
+    [Authorize]
     [ApiController]
     [Route("[controller]s")]
     public class AuthorController : ControllerBase

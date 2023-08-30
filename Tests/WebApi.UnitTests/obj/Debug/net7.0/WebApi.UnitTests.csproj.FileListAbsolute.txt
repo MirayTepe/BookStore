@@ -122,3 +122,10 @@ D:\source\repos\BookStore\Tests\WebApi.UnitTests\obj\Debug\net7.0\refint\WebApi.
 D:\source\repos\BookStore\Tests\WebApi.UnitTests\obj\Debug\net7.0\WebApi.UnitTests.pdb
 D:\source\repos\BookStore\Tests\WebApi.UnitTests\obj\Debug\net7.0\WebApi.UnitTests.genruntimeconfig.cache
 D:\source\repos\BookStore\Tests\WebApi.UnitTests\obj\Debug\net7.0\ref\WebApi.UnitTests.dll
+d:\source\repos\BookStore\Tests\WebApi.UnitTests\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+d:\source\repos\BookStore\Tests\WebApi.UnitTests\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+d:\source\repos\BookStore\Tests\WebApi.UnitTests\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+d:\source\repos\BookStore\Tests\WebApi.UnitTests\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+d:\source\repos\BookStore\Tests\WebApi.UnitTests\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+d:\source\repos\BookStore\Tests\WebApi.UnitTests\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+d:\source\repos\BookStore\Tests\WebApi.UnitTests\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

@@ -11,6 +11,7 @@ using static WebApi.Application.AuthorOperation.Commands.UpdateAuthor.UpdateAuth
 using static WebApi.Application.AuthorOperation.Queries.GetAuthorDetail.GetAuthorDetailQuery;
 using static WebApi.Application.AuthorOperation.Queries.GetAuthors.GetAuthorsQuery;
 using static WebApi.Application.BookOperations.Commands.CreateBook.CreateBookCommand;
+using static WebApi.Application.UserOperations.Commands.CreateUser.CreateUserCommand;
 
 namespace WebApi.Common
 {
@@ -29,6 +30,9 @@ namespace WebApi.Common
 			CreateMap<Author, AuthorDetailViewModel>();
 			CreateMap<CreateAuthorViewModel, Author>();
 			CreateMap<UpdateAuthorViewModel, Author>();
+
+            CreateMap<CreateUserModel,User>();
+
 
 
         }

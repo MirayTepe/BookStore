@@ -38,3 +38,10 @@ D:\source\repos\BookStore\WebApi\obj\Debug\net7.0\refint\WebApi.dll
 D:\source\repos\BookStore\WebApi\obj\Debug\net7.0\WebApi.pdb
 D:\source\repos\BookStore\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 D:\source\repos\BookStore\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+d:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+d:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+d:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+d:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+d:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+d:\source\repos\BookStore\WebApi\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+d:\source\repos\BookStore\WebApi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
